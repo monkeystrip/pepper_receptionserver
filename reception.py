@@ -1,5 +1,19 @@
 # -*- coding: utf-8 -*-
 
+#
+import SimpleHTTPServer
+import SocketServer
+
+PORT = 8000
+
+Handler = SimpleHTTPServer.SimpleHTTPRequestHandler
+
+httpd = SocketServer.TCPServer(("", PORT), Handler)
+
+print "serving at port", PORT
+httpd.serve_forever()
+#
+
 from flask import Flask
 from flask import request
 from flask import jsonify
