@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>来訪者管理 - あいさつ追加</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1>あいさつの追加</h1>
+      <p>
+        あいさつは、QRコード確認時に表示するタブレット画像・セリフのセットです。
+      </p>
+      <form action="add" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="name">名前</label>
+          <input type="text" class="form-control" name="name" id="name">
+        </div>
+        <div class="form-group">
+          <label for="image">画像ファイル</label>
+          <input type="file" name="image" id="image">
+        </div>
+        <div class="form-group">
+          <label for="speech">しゃべる内容</label>
+          <input type="text" class="form-control" name="speech" id="speech" size="120">
+          <p class="help-block">Animated Speechタグが使用できます。</p>        
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="solitary" value="enabled"> 待機中にこのあいさつを再生
+            </label>
+        </div>
+        <button type="submit" class="btn btn-default">追加</button>
+      </form>
+      <div>
+        <a href="/">メニューに戻る</a>
+      </div>
+    </div>
+    <script src="/static/js/bootstrap.min.js"></script>
+  </body>
+</html>

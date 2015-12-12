@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>来訪者管理 - アポイントメント追加</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1>アポイントメントの追加</h1>
+      <form action="add" method="post">
+        <div class="form-group">
+          <label for="starttime">開始予定日時(YYYY/MM/DD HH:MM)</label>
+          <input type="text" id="starttime" name="starttime" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="endtime">終了予定日時(YYYY/MM/DD HH:MM)</label>
+          <input type="text" id="endtime" name="endtime" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="ownername">訪問先</label>
+          <input type="text" id="ownername" name="ownername" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="ownermail">訪問先メールアドレス</label>
+          <input type="text" class="form-control" id="ownermail" name="ownermail">
+        </div>
+        <div class="form-group">
+          <label for="room">打ち合わせ場所</label>
+          <input type="text" class="form-control" id="room" name="room">
+        </div>
+        <div class="form-group">
+          <label for="guestcompany">お客様会社名</label>
+          <input type="text" class="form-control" id="guestcompany" name="guestcompany">
+        </div>
+        <div class="form-group">
+          <label for="guestname">お客様名</label>
+          <input type="text" class="form-control" id="guestname" name="guestname">
+        </div>
+        <div class="form-group">
+          <label for="guestmail">お客様メールアドレス</label>
+          <input type="text" class="form-control" id="guestmail" name="guestmail">
+        </div>
+        <div class="form-group">
+          <label for="greeting">あいさつ</label>
+          <select id="greeting" class="form-control" name="greeting">
+            {% for g in greetings %}
+            <option value="{{ g.id }}">{{ g.name }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <button type="submit" class="btn btn-default">追加</button>
+      </form>
+      <div>
+        <a href="/">メニューに戻る</a>
+      </div>
+    </div>
+    <script src="/static/js/bootstrap.min.js"></script>
+  </body>
+</html>

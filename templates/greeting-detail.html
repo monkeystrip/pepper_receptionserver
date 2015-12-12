@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>来訪者管理 - あいさつ詳細</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1>あいさつ情報</h1>
+      <dl class="dl-horizontal">
+        <dt>ID</dt><dd>{{ id }}</dd>
+        <dt>名前</dt><dd>{{ name }}</dd>
+        <dt>画像</dt><dd>{{ imagepath }}<div><img src="../image/{{ id }}" width="200"></div></dd>
+        <dt>しゃべる内容</dt><dd>{{ speech }}</dd>
+      </dl>
+      <div>
+        <a href="/">メニューに戻る</a>
+      </div>
+    </div>
+    <script src="/static/js/bootstrap.min.js"></script>
+  </body>
+</html>

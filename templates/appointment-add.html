@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>来訪者管理 - アポイントメント追加</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1>アポイントメントの追加完了</h1>
+      <p>
+        アポイントメントを登録しました: {{ id }}
+      </p>
+      <dl class="dl-horizontal">
+        <dt>訪問日時</dt><dd>{{ starttime }}-{{ endtime }}</dd>
+        <dt>お客様名</dt><dd>{{ guestname }}</dd>
+        <dt>訪問先</dt><dd>{{ ownername }}</dd>
+        <dt>あいさつ</dt><dd>{{ greeting }}</dd>
+      </dl>
+      <div>
+        <a href="/">メニューに戻る</a>
+      </div>
+    </div>
+    <script src="/static/js/bootstrap.min.js"></script>
+  </body>
+</html>
